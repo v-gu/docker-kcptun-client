@@ -23,6 +23,8 @@ ENV KCPTUN_DSCP          46
 ENV KCPTUN_NOCOMP        true
 ENV KCPTUN_LOG           /dev/null
 
+EXPOSE $KCPTUN_CLIENT_PORT/tcp
+
 ADD entrypoint.sh /
 ENTRYPOINT ["/entrypoint.sh"]
 
