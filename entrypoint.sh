@@ -6,7 +6,7 @@ KCPTUN_CONF="$BASE_DIR/$KCPTUN_DIR/config.json"
 # ======= KCPTUN CONFIG ======
 KCPTUN_SERVER_ADDR=${KCPTUN_SERVER_ADDR:-127.0.0.1}           #"server listen addr": "127.0.0.1"
 KCPTUN_SERVER_PORT=${KCPTUN_SERVER_PORT:-8388}                #"server listen port": "8388"
-KCPTUN_CLIENT_ADDR=${KCPTUN_CLIENT_ADDR:-127.0.0.1}           #"client listen addr": "127.0.0.1"
+KCPTUN_CLIENT_ADDR=${KCPTUN_CLIENT_ADDR:-0.0.0.0}             #"client listen addr": "0.0.0.0"
 KCPTUN_CLIENT_PORT=${KCPTUN_CLIENT_PORT:-8388}                #"client listen addr": "8388"
 KCPTUN_KEY=${KCPTUN_KEY:-password}                            #"key": "password",
 KCPTUN_CRYPT=${KCPTUN_CRYPT:-aes}                             #"crypt": "aes",

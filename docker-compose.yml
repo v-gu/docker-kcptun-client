@@ -4,6 +4,8 @@ services:
   kcptun-client-main:
     container_name: kcptun-client
     image: lisnaz/kcptun-client:latest
+    ports:
+     - "8388:8388/tcp"
     cap_add:
       - NET_ADMIN
     networks:
