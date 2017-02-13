@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+  kcptun-client-main:
+    container_name: kcptun-client
+    image: lisnaz/kcptun-client:latest
+    cap_add:
+      - NET_ADMIN
+    networks:
+      default:
+        ipv4_address: 172.18.18.10
+    environment:
+      - KCPTUN_SERVER_ADDR=1.1.1.1
+      - KCPTUN_SERVER_PORT=10000
+      - KCPTUN_CRYPT=none
+      - KCPTUN_MODE=fast2
+      - KCPTUN_RCVWND=1024
+      - KCPTUN_MTU=1400
+      - KCPTUN_NOCOMP=false
+
+networks:
+  default:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.18.18.0/24
+          gateway: 172.18.18.1
