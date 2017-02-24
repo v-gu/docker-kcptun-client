@@ -36,7 +36,7 @@ RUN set -ex \
 
 # build kcptun
 ENV BASE_DIR /opt
-ENV KCPTUN_VER 20170120
+ENV KCPTUN_VER 20170221
 ENV KCPTUN_URL https://github.com/xtaci/kcptun/releases/download/v${KCPTUN_VER}/kcptun-linux-amd64-${KCPTUN_VER}.tar.gz
 ENV KCPTUN_DIR kcptun
 RUN set -ex \
