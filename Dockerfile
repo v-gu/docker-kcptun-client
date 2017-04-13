@@ -14,3 +14,9 @@ EXPOSE $KCPTUN_CLIENT_LISTEN_PORT/tcp
 
 ADD entrypoint.sh /
 ENTRYPOINT ["/entrypoint.sh"]
+
+# install dependencies
+ENV KCPTUN_DEP bash
+RUN set -ex \
+    && apk add --update --no-cache $KCPTUN_DEP \
+    && rm -rf /var/cache/apk/* \
