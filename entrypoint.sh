@@ -29,10 +29,10 @@ EOF
 # ====== Generate KCPTUN config ======
 
 
-echo "Starting kcptun ..."
+echo "Starting kcptun client ..."
 ./client_linux_amd64 -v
 echo "+---------------------------------------------------------+"
 echo "KCP Listen     : ${KCPTUN_CLIENT_LISTEN_ADDR}:${KCPTUN_CLIENT_LISTEN_PORT}"
-echo "KCP Parameter: --crypt ${KCPTUN_CRYPT} --key ${KCPTUN_KEY} --mtu ${KCPTUN_MTU} --sndwnd ${KCPTUN_SNDWND} --rcvwnd ${KCPTUN_RCVWND} --mode ${KCPTUN_MODE} --nocomp ${KCPTUN_NOCOMP}" --dscp ${KCPTUN_DSCP}
+echo "KCP Parameter: --crypt ${KCPTUN_CRYPT} --key ${KCPTUN_KEY} --mtu ${KCPTUN_MTU} --sndwnd ${KCPTUN_SNDWND} --rcvwnd ${KCPTUN_RCVWND} --mode ${KCPTUN_MODE} --nocomp ${KCPTUN_NOCOMP} --dscp ${KCPTUN_DSCP}"
 echo "+---------------------------------------------------------+"
 exec "./client_linux_amd64" -c ${KCPTUN_CONF}
