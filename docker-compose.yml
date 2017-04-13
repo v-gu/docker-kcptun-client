@@ -5,7 +5,7 @@ services:
     container_name: kcptun-client
     image: lisnaz/kcptun-client:latest
     ports:
-     - "29900:29900/tcp"
+     - "8388:8388/tcp"
     networks:
       default:
         ipv4_address: 172.18.0.2
