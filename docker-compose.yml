@@ -12,8 +12,8 @@ services:
     environment:
       - KCPTUN_CLIENT_LISTEN_ADDR=<your kcptun client's listening address>
       - KCPTUN_CLIENT_LISTEN_PORT=<your kcptun client's listening port>
-      - KCPTUN_CLIENT_REMOTE_ADDR=<your kcptun server's address>
-      - KCPTUN_CLIENT_REMOTE_PORT=<your kcptun server's port>
+      - KCPTUN_CLIENT_TARGET_ADDR=<your kcptun server's address>
+      - KCPTUN_CLIENT_TARGET_PORT=<your kcptun server's port>
       - KCPTUN_CRYPT=none
       - KCPTUN_MODE=fast2
       - KCPTUN_RCVWND=1024
