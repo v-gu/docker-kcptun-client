@@ -1,11 +1,15 @@
 version: '2'
 
 services:
-  kcptun-client-main:
-    container_name: kcptun-client
+  kcptun-client_main:
+    container_name: kcptun-client_main
     image: lisnaz/kcptun-client:latest
+    cap_add:
+      - NET_ADMIN
+    sysctls:
+      net.ipv4.conf.all.route_localnet: 1
     ports:
-     - "8388:8388/tcp"
+      - "4000:4000/tcp"
     networks:
       default:
         ipv4_address: 172.18.0.2
